@@ -44,32 +44,39 @@ select {
 }
 .searchbar .search-button {
   color: white;
-  background-color: #334453;
+  background-color: #457992;
   height: 30px;
   min-width: 40px;
 }
 .searchbar .search-button i {
+  color: white;
   font-size: 10px;
 }
 .searchbar input {
-  background-color: #33445355;
+  background-color: #45799222;
   height: 30px;
   border-radius: 0;
-  border: 1px solid #33445355;
+  border: 1px solid #45799222;
   outline: none;
   width: 300px;
 }
 
 .btn {
-  border-radius: 50%;
+  border-radius: 9999px;
   text-transform: uppercase;
   padding: 10px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.btn > * {
+  opacity: 1 !important;
+  margin: 0 !important;
+  padding: 0;
+}
 
 .btn-red {
+  opacity: 1 !important;
   color: white;
   background-color: #ff4550;
 }
@@ -99,11 +106,47 @@ nav .login-wrapper {
 nav .login-wrapper span {
   margin-right: 10px;
   margin-left: 3px;
-  opacity: 0.8;
+  opacity: 0.6;
+}
+nav .login-wrapper i {
+  color: #457992;
 }
 nav .login-wrapper .logo img {
   height: 30px;
 }
 nav .login-wrapper .login {
   margin-left: 30px;
+}
+nav .filter {
+  background-color: #292f47;
+  padding: 20px;
+  color: white;
+  font-size: 12px;
+}
+nav .filter i {
+  margin-left: 25px;
+  margin-right: 5px;
+}
+
+header .jumbotron {
+  margin-top: 25px;
+  height: 300px;
+  color: white;
+  background-color: #ff4550;
+}
+header .jumbotron img {
+  width: 53%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 18% 100%);
+}
+header .jumbotron .description {
+  width: 47%;
+  height: 100%;
+}
+header .jumbotron .description h3 {
+  font-size: 15px;
+  margin-top: 15px;
 }
