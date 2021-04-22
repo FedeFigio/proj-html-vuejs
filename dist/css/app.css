@@ -33,6 +33,10 @@ select {
   align-items: center;
 }
 
+.a-end {
+  align-items: flex-end;
+}
+
 .j-center {
   justify-content: center;
 }
@@ -79,6 +83,48 @@ select {
   opacity: 1 !important;
   color: white;
   background-color: #ff4550;
+}
+
+.card {
+  border: 1px solid #292f472c;
+  width: calc(100% / 6 - 10px);
+}
+.card .img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .info {
+  color: #292f47c5;
+  padding: 9px;
+}
+.card .info span {
+  margin-bottom: 10px;
+}
+.card .info .category {
+  color: #292f4781;
+  font-size: 9px;
+}
+.card .info .description {
+  font-size: 11px;
+}
+.card .info .price-vote {
+  border-top: 1px solid #292f472c;
+  padding: 10px 0;
+}
+.card .info .price-vote .vote {
+  font-size: 12px;
+  color: #b79854;
+}
+.card .info .price-vote .int {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+.card .info .price-vote .discount {
+  margin: 0;
+  font-size: 11px;
+  text-decoration: line-through;
 }
 
 nav .link {
@@ -149,4 +195,14 @@ header .jumbotron .description {
 header .jumbotron .description h3 {
   font-size: 15px;
   margin-top: 15px;
+}
+
+main {
+  color: #292f47;
+}
+main section.popoular {
+  padding: 55px 0;
+}
+main section.popoular .row {
+  padding-top: 25px;
 }
