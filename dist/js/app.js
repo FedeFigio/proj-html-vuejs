@@ -12,7 +12,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ "./src/js/menu.js");
 /* harmony import */ var _courses_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./courses.js */ "./src/js/courses.js");
 /* harmony import */ var _social_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./social.js */ "./src/js/social.js");
+/* harmony import */ var _category_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./category.js */ "./src/js/category.js");
 Vue.config.devtools = true;
+
 
 
 
@@ -22,16 +24,63 @@ var app = new Vue({
     return {
       menu: _menu_js__WEBPACK_IMPORTED_MODULE_0__.default,
       courses: _courses_js__WEBPACK_IMPORTED_MODULE_1__.default,
-      social: _social_js__WEBPACK_IMPORTED_MODULE_2__.default
+      social: _social_js__WEBPACK_IMPORTED_MODULE_2__.default,
+      category: _category_js__WEBPACK_IMPORTED_MODULE_3__.default,
+      developmentCourses: []
     };
   },
   methods: {},
   mounted: function mounted() {
-    console.log(this.courses);
+    var _this = this;
+
+    this.courses.sort(function (a, b) {
+      return a.popoularity - b.popoularity;
+    });
+    this.courses.reverse().forEach(function (element) {
+      if (element.category == 1) {
+        _this.developmentCourses.push(element);
+      }
+    });
   },
   computed: {},
   watch: function watch() {}
 });
+
+/***/ }),
+
+/***/ "./src/js/category.js":
+/*!****************************!*\
+  !*** ./src/js/category.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var category = [{
+  name: "Developement",
+  category: "1"
+}, {
+  name: "Business",
+  category: "2"
+}, {
+  name: "Design",
+  category: "3"
+}, {
+  name: "IT & Software",
+  category: "4"
+}, {
+  name: "Lifestyle",
+  category: "5"
+}, {
+  name: "Marketing",
+  category: "6"
+}, {
+  name: "Office Productivity",
+  category: "7"
+}];
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (category);
 
 /***/ }),
 

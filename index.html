@@ -96,9 +96,9 @@
             <section class="popoular">
                 <div class="container flex column">
                     <h4>Popoular Development Courses</h4>
-                    <div class="row flex between">
-                        <div class="card flex column">
-                            <img src="dist/img/1.jpg" alt="">
+                    <div class="row flex j-start">
+                        <div v-if="index < 4" class="card flex column" v-for="(course, index) in developmentCourses" :key="index">
+                            <img :src="`dist/img/${course.cover}`" alt="">
                             <div class="info flex column">
                                 <span class="category">Developement</span>
                                 <span class="description">sfcsdfsdvdfvd fsbfdbvdfsb  df df dffgdgdfg dfgdf gfdg</span>

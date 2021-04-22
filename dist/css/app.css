@@ -41,6 +41,10 @@ select {
   justify-content: center;
 }
 
+.j-start {
+  justify-content: flex-start;
+}
+
 .searchbar {
   display: flex;
   justify-content: center;
@@ -88,6 +92,7 @@ select {
 .card {
   border: 1px solid #292f472c;
   width: calc(100% / 6 - 10px);
+  margin-right: 10px;
 }
 .card .img {
   width: 100%;
