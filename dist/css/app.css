@@ -29,6 +29,51 @@ select {
   justify-content: space-between;
 }
 
+.a-center {
+  align-items: center;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchbar .search-button {
+  color: white;
+  background-color: #334453;
+  height: 30px;
+  min-width: 40px;
+}
+.searchbar .search-button i {
+  font-size: 10px;
+}
+.searchbar input {
+  background-color: #33445355;
+  height: 30px;
+  border-radius: 0;
+  border: 1px solid #33445355;
+  outline: none;
+  width: 300px;
+}
+
+.btn {
+  border-radius: 50%;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-red {
+  color: white;
+  background-color: #ff4550;
+}
+
 nav .link {
   color: #292f47;
   opacity: 0.5;
@@ -40,8 +85,25 @@ nav .link select {
   font-size: 10px;
 }
 nav .link li {
-  margin-left: 10px;
+  margin-left: 14px;
 }
 nav .link ul {
   margin-left: 15px;
+}
+nav .login-wrapper {
+  color: #292f47;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 12px;
+}
+nav .login-wrapper span {
+  margin-right: 10px;
+  margin-left: 3px;
+  opacity: 0.8;
+}
+nav .login-wrapper .logo img {
+  height: 30px;
+}
+nav .login-wrapper .login {
+  margin-left: 30px;
 }

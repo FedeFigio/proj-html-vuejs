@@ -1,0 +1,36 @@
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .search-button {
+        color: white;
+        background-color: $oxfordBlue;
+        height: 30px;
+        min-width: 40px;
+        i {
+            font-size: 10px;
+        }
+    }
+    input {
+        background-color: #33445355;
+        height: 30px;
+        border-radius: 0;
+        border: 1px solid #33445355;
+        outline: none;
+        width: 300px;
+    }
+}
+
+.btn {
+    border-radius: 50%;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-red {
+    color: white;
+    background-color: $coralRed;
+}
