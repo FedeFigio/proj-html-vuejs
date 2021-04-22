@@ -10,22 +10,64 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ "./src/js/menu.js");
+/* harmony import */ var _courses_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./courses.js */ "./src/js/courses.js");
+/* harmony import */ var _social_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./social.js */ "./src/js/social.js");
 Vue.config.devtools = true;
+
+
 
 var app = new Vue({
   el: "#root",
   data: function data() {
     return {
-      menu: _menu_js__WEBPACK_IMPORTED_MODULE_0__.default
+      menu: _menu_js__WEBPACK_IMPORTED_MODULE_0__.default,
+      courses: _courses_js__WEBPACK_IMPORTED_MODULE_1__.default,
+      social: _social_js__WEBPACK_IMPORTED_MODULE_2__.default
     };
   },
   methods: {},
   mounted: function mounted() {
-    console.log(this.menu);
+    console.log(this.courses);
   },
   computed: {},
   watch: function watch() {}
 });
+
+/***/ }),
+
+/***/ "./src/js/courses.js":
+/*!***************************!*\
+  !*** ./src/js/courses.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var courses = []; // create arrai courses
+
+for (var i = 1; i <= 16; i++) {
+  var course = {
+    cover: "".concat(i, ".jpg"),
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+    vote: getRandomIntInclusive(1, 5),
+    popoularity: getRandomIntInclusive(1, 5),
+    category: getRandomIntInclusive(1, 7),
+    price: getRandomIntInclusive(1, 150),
+    discount: getRandomIntInclusive(1, 20)
+  };
+  courses.push(course);
+} // generate random number in range
+
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (courses);
 
 /***/ }),
 
@@ -40,10 +82,73 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var menu = [{
-  name: "home",
+  name: "Home",
+  link: ""
+}, {
+  name: "Pages",
+  link: ""
+}, {
+  name: "Course Formats",
+  link: ""
+}, {
+  name: "Courses",
+  link: ""
+}, {
+  name: "Demos",
   link: ""
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menu);
+
+/***/ }),
+
+/***/ "./src/js/social.js":
+/*!**************************!*\
+  !*** ./src/js/social.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var social = [{
+  name: "Facebook",
+  link: "",
+  icon: "fab fa-facebook"
+}, {
+  name: "Twitter",
+  link: "",
+  icon: "fab fa-twitter"
+}, {
+  name: "Instagram",
+  link: "",
+  icon: "fab fa-instagram"
+}, {
+  name: "Linkedin",
+  link: "",
+  icon: "fab fa-linkedin"
+}, {
+  name: "Google+",
+  link: "",
+  icon: "fab fa-google-plus"
+}, {
+  name: "You Tube",
+  link: "",
+  icon: "fab fa-youtube"
+}, {
+  name: "Pinterest",
+  link: "",
+  icon: "fab fa-pinterest"
+}, {
+  name: "Dribble",
+  link: "",
+  icon: "fab fa-dribbble"
+}, {
+  name: "Skype",
+  link: "",
+  icon: "fab fa-skype"
+}];
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (social);
 
 /***/ }),
 

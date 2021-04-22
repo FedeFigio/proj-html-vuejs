@@ -3,4 +3,45 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+select {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+nav .link {
+  color: #292f47;
+  opacity: 0.5;
+  padding: 10px 0;
+  border-bottom: 1px solid #292f4755;
+  font-size: 10px;
+}
+nav .link select {
+  font-size: 10px;
+}
+nav .link li {
+  margin-left: 10px;
+}
+nav .link ul {
+  margin-left: 15px;
 }

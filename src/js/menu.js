@@ -1,7 +1,24 @@
 const menu = [{
-    name: "home",
-    link: ""
-}]
+        name: "Home",
+        link: ""
+    },
+    {
+        name: "Pages",
+        link: ""
+    },
+    {
+        name: "Course Formats",
+        link: ""
+    },
+    {
+        name: "Courses",
+        link: ""
+    },
+    {
+        name: "Demos",
+        link: ""
+    },
+]
 
 
 
