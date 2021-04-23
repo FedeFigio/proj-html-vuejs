@@ -11,18 +11,40 @@ let app = new Vue({
             courses: courses,
             social: social,
             category: category,
-            developmentCourses: []
+            developmentCourses: [],
+            filteredCourses: [],
+            categorySet: null
         }
     },
-    methods: {},
+    methods: {
+        setCategory(cat) {
+            this.categorySet = cat.category
+            console.log(this.categorySet);
+        },
+        courseFiltered(course) {
+            this.courses.forEach((element) => {
+                if (element.category == this.categorySet) {
+                    this.filteredCourses.push(element)
+                }
+            })
+        }
+    },
     mounted() {
         // push dei corsi development in un array
-        this.courses.reverse().forEach((element) => {
+        this.courses.forEach((element) => {
             if (element.category == 1) {
                 this.developmentCourses.push(element)
             }
         })
     },
-    computed: {},
+    computed: {
+        courseFiltered() {
+            this.courses.forEach((element) => {
+                if (element.category == this.categorySet) {
+                    this.filteredCourses.push(element)
+                }
+            })
+        }
+    },
     watch() {}
 })
