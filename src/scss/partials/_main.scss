@@ -63,6 +63,10 @@ main {
                 background-color: white;
             }
         }
+        .description,
+        .input {
+            padding: 10px;
+        }
         p {
             font-size: 10px;
             margin-top: 10px;
@@ -85,6 +89,57 @@ main {
         }
         .btn-carousel {
             margin-top: 30px;
+        }
+    }
+    section.business-instructor {
+        padding: 55px 0;
+        .container {
+            &>* {
+                width: calc(100% / 2 - 10px);
+                padding: 40px 20px;
+                border: 1px solid #292f472c;
+                &>img {
+                    width: 30%;
+                }
+            }
+            .md-card {
+                div {
+                    padding-left: 25px;
+                    &>*:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                    p {
+                        opacity: .5;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    section.investing {
+        height: 440px;
+        background-image: url(../img/testimonial-1-1917x640-1-1914x639.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 55px 0;
+        .description {
+            background-color: white;
+            width: 67%;
+            padding: 55px;
+            &>*:not(span) {
+                margin-bottom: 20px;
+            }
+            span {
+                font-weight: bold;
+                opacity: .8;
+            }
+            p {
+                color: #292f47c5;
+                font-size: 14px;
+                &:last-child {
+                    font-size: 12px;
+                }
+            }
         }
     }
 }

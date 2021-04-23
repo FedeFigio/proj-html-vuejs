@@ -178,10 +178,10 @@
             <!-- POPOULAR COURSES -->
             <section class="popoular-courses ">
                 <div class="container flex column a-center">
-                    <h1>POPular courses</h1>
+                    <h1>Popular courses</h1>
                     <p>Discover our most popular courses for self learning</p>
                     <div class="row flex j-start wrap">
-                        <div v-if="index < 6" class="card flex column" v-for="(course, index) in filteredCourses" :key="index">
+                        <div v-if="index < 6 && course.popoularity > 4" class="card flex column" v-for="(course, index) in filteredCourses" :key="index">
                             <img :src="`dist/img/${course.cover}`" alt="">
                             <div class="info flex column">
                                 <span class="category">{Developement}</span>
@@ -207,7 +207,40 @@
                         </div>
                     </div>
             </section>
-
+            <!-- BUSINESS-INSTRUCTOR -->
+            <section class="business-instructor">
+                <div class="container flex between a-center">
+                    <div class="md-card flex ">
+                        <img src="dist/img/image_box_1-221x231.png" alt="">
+                        <div class="description flex column">
+                            <h2>Become an Instructor</h2>
+                            <p>Teach what you love Masterstudy gives you the tools to create a course</p>
+                            <div class="btn btn-red">start teaching</div>
+                        </div>
+                    </div>
+                    <div class="md-card flex ">
+                        <img src="dist/img/image_box_2-234x231.png" alt="">
+                        <div class="description flex column">
+                            <h2>Access For Business</h2>
+                            <p>Teach what you love Masterstudy gives you the tools to create a course</p>
+                            <div class="btn btn-red">Doing business</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- INVESTING BANNER -->
+            <section class="investing">
+                <div class="container-banner flex a-center">
+                    <div class="description">
+                        <h2>Investing for your future</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sapiente velit, repudiandae consequatur iusto, quas recusandae architecto asperiores iste autem explicabo ipsum maxime ratione quisquam omnis quasi dignissimos odit
+                            veniam?
+                        </p>
+                        <span>Linda Green</span>
+                        <p>Product manager.Apple inc</p>
+                    </div>
+                </div>
+            </section>
         </main>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue "></script>

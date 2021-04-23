@@ -22,6 +22,10 @@ select {
   background-color: transparent;
 }
 
+li {
+  cursor: pointer;
+}
+
 .flex {
   display: flex;
 }
@@ -302,6 +306,10 @@ main section.subscribe {
 main section.subscribe .searchbar input {
   background-color: white;
 }
+main section.subscribe .description,
+main section.subscribe .input {
+  padding: 10px;
+}
 main section.subscribe p {
   font-size: 10px;
   margin-top: 10px;
@@ -324,4 +332,51 @@ main section.popoular-courses .row {
 }
 main section.popoular-courses .btn-carousel {
   margin-top: 30px;
+}
+main section.business-instructor {
+  padding: 55px 0;
+}
+main section.business-instructor .container > * {
+  width: calc(100% / 2 - 10px);
+  padding: 40px 20px;
+  border: 1px solid #292f472c;
+}
+main section.business-instructor .container > * > img {
+  width: 30%;
+}
+main section.business-instructor .container .md-card div {
+  padding-left: 25px;
+}
+main section.business-instructor .container .md-card div > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+main section.business-instructor .container .md-card div p {
+  opacity: 0.5;
+  font-size: 14px;
+}
+main section.investing {
+  height: 440px;
+  background-image: url(../img/testimonial-1-1917x640-1-1914x639.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 55px 0;
+}
+main section.investing .description {
+  background-color: white;
+  width: 67%;
+  padding: 55px;
+}
+main section.investing .description > *:not(span) {
+  margin-bottom: 20px;
+}
+main section.investing .description span {
+  font-weight: bold;
+  opacity: 0.8;
+}
+main section.investing .description p {
+  color: #292f47c5;
+  font-size: 14px;
+}
+main section.investing .description p:last-child {
+  font-size: 12px;
 }
