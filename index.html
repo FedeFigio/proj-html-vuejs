@@ -127,8 +127,30 @@
                 </div>
             </section>
             <!-- RECENT COURSES -->
-            <section class="recent-courses">
+            <section class="recent-courses flex column a-center">
+                <h1>Recent Courses</h1>
+                <ul class="flex">
+                    <li :class="index == categorySet ? 'active':''" v-for="(cat, index) in category" :key="index" @click="setCategory(cat)">{{cat.name}}</li>
+                </ul>
                 <div class="row flex j-start wrap">
+
+
+                    <div v-if="index < 11" class="card flex column" v-for="(course, index) in filteredCourses" :key="index">
+                        <img :src="`dist/img/${course.cover}`" alt="">
+                        <div class="info flex column">
+                            <span class="category">{Developement}</span>
+                            <span class="description">{{course.description}}</span>
+                            <div class="price-vote flex between a-center">
+                                <div class="vote flex">
+                                    <i v-for="(star, index) in course.vote" :key="index" class="fas fa-star"></i>
+                                </div>
+                                <div class="price flex column a-end">
+                                    <span class="discount">${{course.price}}</span>
+                                    <span class="int">${{course.price - course.discount}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </section>

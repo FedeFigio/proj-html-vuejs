@@ -61,7 +61,7 @@ select {
 }
 .searchbar .search-button {
   color: white;
-  background-color: #457992;
+  background-color: #3a78bd;
   height: 30px;
   min-width: 40px;
 }
@@ -234,6 +234,9 @@ main section.banner {
   background-size: cover;
   background-repeat: no-repeat;
 }
+main section.banner .container-banner .description {
+  color: #292f47;
+}
 main section.banner .container-banner .description h1 {
   font-size: 32px;
 }
@@ -241,8 +244,27 @@ main section.banner .container-banner .description > *:not(:last-child) {
   margin-bottom: 20px;
 }
 main section.recent-courses {
+  color: #292f47;
   padding: 55px 0;
+}
+main section.recent-courses > * {
+  margin-bottom: 30px;
+}
+main section.recent-courses h1 {
+  font-size: 32px;
+}
+main section.recent-courses ul li {
+  margin: 0 10px;
+  padding: 5px 10px;
+  opacity: 0.5;
+}
+main section.recent-courses ul li.active {
+  background-color: #dde6eb;
+  border-radius: 99999px;
 }
 main section.recent-courses .row {
   padding-top: 25px;
+}
+main section.recent-courses .row .card {
+  margin-top: 30px;
 }

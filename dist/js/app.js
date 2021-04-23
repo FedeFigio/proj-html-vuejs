@@ -26,21 +26,50 @@ var app = new Vue({
       courses: _courses_js__WEBPACK_IMPORTED_MODULE_1__.default,
       social: _social_js__WEBPACK_IMPORTED_MODULE_2__.default,
       category: _category_js__WEBPACK_IMPORTED_MODULE_3__.default,
-      developmentCourses: []
+      developmentCourses: [],
+      filteredCourses: _courses_js__WEBPACK_IMPORTED_MODULE_1__.default,
+      categorySet: 0
     };
   },
-  methods: {},
+  methods: {
+    setCategory: function setCategory(cat) {
+      var _this = this;
+
+      this.categorySet = cat.category;
+      console.log(this.categorySet);
+      this.filteredCourses = [];
+      this.courses.forEach(function (element) {
+        if (cat.category == 0) {
+          _this.filteredCourses.push(element);
+        }
+
+        if (element.category == _this.categorySet) {
+          _this.filteredCourses.push(element);
+        }
+      });
+    }
+  },
   mounted: function mounted() {
-    var _this = this;
+    var _this2 = this;
 
     // push dei corsi development in un array
-    this.courses.reverse().forEach(function (element) {
+    this.courses.forEach(function (element) {
       if (element.category == 1) {
-        _this.developmentCourses.push(element);
+        _this2.developmentCourses.push(element);
       }
     });
   },
-  computed: {},
+  computed: {
+    courseFiltered: function courseFiltered() {
+      var _this3 = this;
+
+      this.courses.forEach(function (element) {
+        if (element.category == _this3.categorySet) {
+          _this3.filteredCourses.push(element);
+        }
+      });
+    }
+  },
   watch: function watch() {}
 });
 
@@ -57,6 +86,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var category = [{
+  name: "All Courses",
+  category: "0"
+}, {
   name: "Developement",
   category: "1"
 }, {

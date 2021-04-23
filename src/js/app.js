@@ -12,22 +12,24 @@ let app = new Vue({
             social: social,
             category: category,
             developmentCourses: [],
-            filteredCourses: [],
-            categorySet: null
+            filteredCourses: courses,
+            categorySet: 0
         }
     },
     methods: {
         setCategory(cat) {
             this.categorySet = cat.category
             console.log(this.categorySet);
-        },
-        courseFiltered(course) {
+            this.filteredCourses = []
             this.courses.forEach((element) => {
+                if (cat.category == 0) {
+                    this.filteredCourses.push(element)
+                }
                 if (element.category == this.categorySet) {
                     this.filteredCourses.push(element)
                 }
             })
-        }
+        },
     },
     mounted() {
         // push dei corsi development in un array

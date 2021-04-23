@@ -1,4 +1,8 @@
 const category = [{
+        name: "All Courses",
+        category: "0"
+    },
+    {
         name: "Developement",
         category: "1"
     },
