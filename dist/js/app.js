@@ -33,9 +33,7 @@ var app = new Vue({
   mounted: function mounted() {
     var _this = this;
 
-    this.courses.sort(function (a, b) {
-      return a.popoularity - b.popoularity;
-    });
+    // push dei corsi development in un array
     this.courses.reverse().forEach(function (element) {
       if (element.category == 1) {
         _this.developmentCourses.push(element);

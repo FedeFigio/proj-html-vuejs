@@ -92,31 +92,44 @@
             </div>
         </header>
         <main>
-            <!-- POPOULAR CARD -->
-            <section class="popoular">
+            <!-- POPOULAR DEVELOPMENT CARD -->
+            <section class="popoular-development">
                 <div class="container flex column">
                     <h4>Popoular Development Courses</h4>
                     <div class="row flex j-start">
-                        <div v-if="index < 4" class="card flex column" v-for="(course, index) in developmentCourses" :key="index">
+                        <div v-if="index < 5" class="card flex column" v-for="(course, index) in developmentCourses" :key="index">
                             <img :src="`dist/img/${course.cover}`" alt="">
                             <div class="info flex column">
-                                <span class="category">Developement</span>
-                                <span class="description">sfcsdfsdvdfvd fsbfdbvdfsb  df df dffgdgdfg dfgdf gfdg</span>
+                                <span class="category">{Developement}</span>
+                                <span class="description">{{course.description}}</span>
                                 <div class="price-vote flex between a-center">
                                     <div class="vote flex">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i v-for="(star, index) in course.vote" :key="index" class="fas fa-star"></i>
                                     </div>
                                     <div class="price flex column a-end">
-                                        <span class="discount">234</span>
-                                        <span class="int">354</span>
+                                        <span class="discount">${{course.price}}</span>
+                                        <span class="int">${{course.price - course.discount}}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <!-- BANNER -->
+            <section class="banner flex a-center">
+                <div class="container-banner">
+                    <div class="description flex column j-start ">
+                        <h1>Limitless learning, <br> more possibilities</h1>
+                        <p>Online courses open the opportunity for learning to almost anyone. <br> regardless of their scheduling commitmens.</p>
+                        <div class="btn btn-red">read more</div>
+                    </div>
+                </div>
+            </section>
+            <!-- RECENT COURSES -->
+            <section class="recent-courses">
+                <div class="row flex j-start wrap">
+
                 </div>
             </section>
         </main>

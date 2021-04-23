@@ -1,6 +1,28 @@
 main {
     color: $ebonyClay;
-    section.popoular {
+    section.popoular-development {
+        padding: 55px 0;
+        .row {
+            padding-top: 25px;
+        }
+    }
+    section.banner {
+        height: 375px;
+        background-image: url(../img/bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        .container-banner {
+            .description {
+                h1 {
+                    font-size: 32px;
+                }
+                &>*:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    section.recent-courses {
         padding: 55px 0;
         .row {
             padding-top: 25px;
