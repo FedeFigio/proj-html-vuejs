@@ -79,15 +79,17 @@ select {
 }
 
 .btn {
+  cursor: pointer;
   border-radius: 9999px;
   text-transform: uppercase;
-  padding: 10px 15px;
+  padding: 13px 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-weight: bold;
 }
 .btn > * {
   opacity: 1 !important;
@@ -101,9 +103,30 @@ select {
   background-color: #ff4550;
 }
 
+.btn-carousel {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-carousel > * {
+  padding: 5px 13px;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.185);
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  font-size: 20px;
+}
+.btn-carousel > *:hover {
+  background-color: #3a78bd;
+  color: white;
+}
+
 .card {
+  cursor: pointer;
   border: 1px solid #292f472c;
   width: calc(100% / 6 - 10px);
+}
+.card:not(:last-child) {
   margin-right: 10px;
 }
 .card .img {
@@ -114,6 +137,7 @@ select {
 .card .info {
   color: #292f47c5;
   padding: 9px;
+  background-color: white;
 }
 .card .info span {
   margin-bottom: 10px;
@@ -254,7 +278,9 @@ main section.recent-courses h1 {
   font-size: 32px;
 }
 main section.recent-courses ul li {
-  margin: 0 10px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0 7px;
   padding: 5px 10px;
   opacity: 0.5;
 }
@@ -262,9 +288,40 @@ main section.recent-courses ul li.active {
   background-color: #dde6eb;
   border-radius: 99999px;
 }
-main section.recent-courses .row {
-  padding-top: 25px;
-}
 main section.recent-courses .row .card {
+  margin-top: 30px;
+}
+main section.recent-courses .btn {
+  margin-top: 30px;
+}
+main section.subscribe {
+  color: white;
+  background-color: #ff4550;
+  padding: 30px;
+}
+main section.subscribe .searchbar input {
+  background-color: white;
+}
+main section.subscribe p {
+  font-size: 10px;
+  margin-top: 10px;
+}
+main section.subscribe .search-wrapper {
+  margin-top: 10px;
+}
+main section.popoular-courses {
+  background-color: #dde6eb;
+  padding: 55px 0;
+}
+main section.popoular-courses h1 {
+  font-size: 32px;
+}
+main section.popoular-courses p {
+  opacity: 0.7;
+}
+main section.popoular-courses .row {
+  margin-top: 30px;
+}
+main section.popoular-courses .btn-carousel {
   margin-top: 30px;
 }

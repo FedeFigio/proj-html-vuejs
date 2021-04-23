@@ -59,17 +59,7 @@ var app = new Vue({
       }
     });
   },
-  computed: {
-    courseFiltered: function courseFiltered() {
-      var _this3 = this;
-
-      this.courses.forEach(function (element) {
-        if (element.category == _this3.categorySet) {
-          _this3.filteredCourses.push(element);
-        }
-      });
-    }
-  },
+  computed: {},
   watch: function watch() {}
 });
 

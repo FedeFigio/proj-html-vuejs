@@ -39,14 +39,6 @@ let app = new Vue({
             }
         })
     },
-    computed: {
-        courseFiltered() {
-            this.courses.forEach((element) => {
-                if (element.category == this.categorySet) {
-                    this.filteredCourses.push(element)
-                }
-            })
-        }
-    },
+    computed: {},
     watch() {}
 })

@@ -23,13 +23,15 @@
 }
 
 .btn {
+    cursor: pointer;
     border-radius: 9999px;
     text-transform: uppercase;
-    padding: 10px 15px;
+    padding: 13px 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
+    font-weight: bold;
     &>* {
         opacity: 1 !important;
         margin: 0 !important;
@@ -43,10 +45,31 @@
     background-color: $coralRed;
 }
 
+.btn-carousel {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &>* {
+        padding: 5px 13px;
+        background-color: white;
+        color: rgba(0, 0, 0, 0.185);
+        border: 1px solid rgba(0, 0, 0, 0.185);
+        font-size: 20px;
+        &:hover {
+            background-color: $bostonBlue;
+            color: white;
+        }
+    }
+}
+
 .card {
+    cursor: pointer;
     border: 1px solid #292f472c;
     width: calc(100% / 6 - 10px);
-    margin-right: 10px;
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
     .img {
         width: 100%;
         object-fit: cover;
@@ -54,6 +77,7 @@
     .info {
         color: #292f47c5;
         padding: 9px;
+        background-color: white;
         span {
             margin-bottom: 10px;
         }
