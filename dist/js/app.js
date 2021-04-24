@@ -47,6 +47,19 @@ var app = new Vue({
           _this.filteredCourses.push(element);
         }
       });
+    },
+    getStars: function getStars(vote) {
+      var starsHTML = '';
+
+      for (var i = 1; i <= 5; i++) {
+        if (i <= Math.ceil(vote / 2)) {
+          starsHTML += '<img src="dist/img/starfull.svg" alt="">';
+        } else {
+          starsHTML += '<img src="dist/img/staremptyl.svg" alt="">';
+        }
+      }
+
+      return starsHTML;
     }
   },
   mounted: function mounted() {
@@ -58,9 +71,7 @@ var app = new Vue({
         _this2.developmentCourses.push(element);
       }
     });
-  },
-  computed: {},
-  watch: function watch() {}
+  }
 });
 
 /***/ }),

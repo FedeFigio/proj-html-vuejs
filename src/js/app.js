@@ -30,6 +30,17 @@ let app = new Vue({
                 }
             })
         },
+        getStars(vote) {
+            let starsHTML = '';
+            for (var i = 1; i <= 5; i++) {
+                if (i <= Math.ceil(vote / 2)) {
+                    starsHTML += '<img src="dist/img/starfull.svg" alt="">';
+                } else {
+                    starsHTML += '<img src="dist/img/staremptyl.svg" alt="">';
+                }
+            }
+            return starsHTML;
+        },
     },
     mounted() {
         // push dei corsi development in un array
@@ -39,6 +50,4 @@ let app = new Vue({
             }
         })
     },
-    computed: {},
-    watch() {}
 })
