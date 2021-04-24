@@ -92,6 +92,7 @@
             </div>
         </header>
         <main>
+
             <!-- POPOULAR DEVELOPMENT CARD -->
             <section class="popoular-development">
                 <div class="container flex column">
@@ -103,9 +104,7 @@
                                 <span class="category">{Developement}</span>
                                 <span class="description">{{course.description}}</span>
                                 <div class="price-vote flex between a-center">
-                                    <div class="vote flex">
-                                        <i v-for="(star, index) in course.vote" :key="index" class="fas fa-star"></i>
-                                    </div>
+                                    <div v-html="getStars(course.vote)" class="vote flex"></div>
                                     <div class="price flex column a-end">
                                         <span class="discount">${{course.price}}</span>
                                         <span class="int">${{course.price - course.discount}}</span>
@@ -116,6 +115,7 @@
                     </div>
                 </div>
             </section>
+
             <!-- BANNER -->
             <section class="banner flex a-center">
                 <div class="container-banner">
@@ -126,10 +126,10 @@
                     </div>
                 </div>
             </section>
+
             <!-- RECENT COURSES -->
             <section class="recent-courses ">
                 <div class="container flex column a-center">
-
                     <h1>Recent Courses</h1>
                     <ul class="flex">
                         <li :class="index == categorySet ? 'active':''" v-for="(cat, index) in category" :key="index" @click="setCategory(cat)">{{cat.name}}</li>
@@ -141,9 +141,7 @@
                                 <span class="category">{Developement}</span>
                                 <span class="description">{{course.description}}</span>
                                 <div class="price-vote flex between a-center">
-                                    <div class="vote flex">
-                                        <i v-for="(star, index) in course.vote" :key="index" class="fas fa-star"></i>
-                                    </div>
+                                    <div v-html="getStars(course.vote)" class="vote flex"></div>
                                     <div class="price flex column a-end">
                                         <span class="discount">${{course.price}}</span>
                                         <span class="int">${{course.price - course.discount}}</span>
@@ -155,6 +153,7 @@
                     <div class="btn btn-red">show all</div>
                 </div>
             </section>
+
             <!-- SUBSCRIBE -->
             <section class="subscribe flex a c-center">
                 <div class="container-banner flex a-center">
@@ -175,6 +174,7 @@
                     </div>
                 </div>
             </section>
+
             <!-- POPOULAR COURSES -->
             <section class="popoular-courses ">
                 <div class="container flex column a-center">
@@ -187,9 +187,7 @@
                                 <span class="category">{Developement}</span>
                                 <span class="description">{{course.description}}</span>
                                 <div class="price-vote flex between a-center">
-                                    <div class="vote flex">
-                                        <i v-for="(star, index) in course.vote" :key="index" class="fas fa-star"></i>
-                                    </div>
+                                    <div v-html="getStars(course.vote)" class="vote flex"></div>
                                     <div class="price flex column a-end">
                                         <span class="discount">${{course.price}}</span>
                                         <span class="int">${{course.price - course.discount}}</span>
@@ -207,6 +205,7 @@
                         </div>
                     </div>
             </section>
+
             <!-- BUSINESS-INSTRUCTOR -->
             <section class="business-instructor">
                 <div class="container flex between a-center">
@@ -228,6 +227,7 @@
                     </div>
                 </div>
             </section>
+
             <!-- INVESTING BANNER -->
             <section class="investing">
                 <div class="container-banner flex a-center">
