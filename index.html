@@ -242,6 +242,40 @@
                 </div>
             </section>
         </main>
+        <footer>
+            <section class="link">
+                <div class="container-banner flex between">
+                    <div class="about flex column">
+                        <h4>about</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam vitae earum tenetur magni illo blanditiis ducimus. Ipsam animi placeat delectus ratione officiis explicabo incidunt magni corrupti mollitia!</p>
+                    </div>
+                    <div class="contact flex column">
+                        <h4>contact</h4>
+                        <p class="mb-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <p>Tel.: +1 352 5252 56</p>
+                        <p class="mb-10">Tel.: +1 352 5252 56</p>
+                        <span>info@masterstudy.com</span>
+                    </div>
+                    <div class="social flex column">
+                        <h4>social</h4>
+                        <ul class="flex wrap between">
+                            <li :class="item.bgColor" class="flex a-center j-center" v-if="item.name !='YouTube'" v-for="(item, index) in social" :key="index">
+                                <i :class="`${item.icon}`"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="banner">
+                        <img src="dist/img/Top-udemy-courses-90-percent-off.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="copiright">
+                <div class="container-banner flex a-center">
+                    <img src="dist/img/footer-logo2x-50x56.png" alt="">
+                    <p>Copiright 2020. <span>MasterStudy.</span>Theme by <span>StylemixThemes</span></p>
+                </div>
+            </section>
+        </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue "></script>
         <script src="dist/js/app.js"></script>
