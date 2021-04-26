@@ -45,7 +45,7 @@
                             <i class="fas fa-bars"></i>
                             <span>Categories</span>
                             <div class="searchbar">
-                                <input type="text">
+                                <input type="text" placeholder="Search Courses">
                                 <div class="search-button flex a-center j-center">
                                     <i class="fas fa-search"></i>
                                 </div>
@@ -101,7 +101,7 @@
                         <div v-if="index < 5" class="card flex column" v-for="(course, index) in developmentCourses" :key="index">
                             <img :src="`dist/img/${course.cover}`" alt="">
                             <div class="info flex column">
-                                <span class="category">{Developement}</span>
+                                <span class="category">Developement ></span>
                                 <span class="description">{{course.description}}</span>
                                 <div class="price-vote flex between a-center">
                                     <div v-html="getStars(course.vote)" class="vote flex"></div>
@@ -138,7 +138,7 @@
                         <div v-if="index < 12" class="card flex column" v-for="(course, index) in filteredCourses" :key="index">
                             <img :src="`dist/img/${course.cover}`" alt="">
                             <div class="info flex column">
-                                <span class="category">{Developement}</span>
+                                <span v-if="item.category == course.category" v-for="(item, index) in category" :key="index" class="category">{{item.name}} ></span>
                                 <span class="description">{{course.description}}</span>
                                 <div class="price-vote flex between a-center">
                                     <div v-html="getStars(course.vote)" class="vote flex"></div>
@@ -159,13 +159,13 @@
                 <div class="container-banner flex a-center">
                     <div class="descriprion flex column">
                         <h4>Subscribe on newsletter</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing dolor sit amet consectetur adipisicing dolor </p>
                     </div>
                     <div class="input flex column">
                         <h4>YOUR EMAIL ADDRESS</h4>
                         <div class="search-wrapper flex a-center">
                             <div class="searchbar">
-                                <input type="text">
+                                <input type="text" placeholder="Enter Your E-Mail">
                                 <div class="search-button flex a-center j-center">
                                     <i class="fas fa-search"></i>
                                 </div>
@@ -184,7 +184,7 @@
                         <div v-if="index < 6 && course.popoularity > 4" class="card flex column" v-for="(course, index) in filteredCourses" :key="index">
                             <img :src="`dist/img/${course.cover}`" alt="">
                             <div class="info flex column">
-                                <span class="category">{Developement}</span>
+                                <span v-if="item.category == course.category" v-for="(item, index) in category" :key="index" class="category" class="category">{{item.name}} ></span>
                                 <span class="description">{{course.description}}</span>
                                 <div class="price-vote flex between a-center">
                                     <div v-html="getStars(course.vote)" class="vote flex"></div>
@@ -259,8 +259,10 @@
                     <div class="social flex column">
                         <h4>social</h4>
                         <ul class="flex wrap between">
-                            <li :class="item.bgColor" class="flex a-center j-center" v-if="item.name !='YouTube'" v-for="(item, index) in social" :key="index">
-                                <i :class="`${item.icon}`"></i>
+                            <li v-if="item.name !='YouTube'" v-for="(item, index) in social" :key="index">
+                                <div :class="item.bgColor" class="wrap-social flex a-center j-center">
+                                    <i :class="`${item.icon}`"></i>
+                                </div>
                             </li>
                         </ul>
                     </div>

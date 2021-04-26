@@ -1,6 +1,6 @@
 footer {
     background-color: $ebonyClay;
-    color: white;
+    color: $white;
     section.link {
         .container-banner {
             padding: 30px 0;
@@ -23,11 +23,14 @@ footer {
                 width: 100%;
             }
             li {
+                width: calc(100% / 4);
                 font-size: 16px;
-                width: 35px;
-                height: 35px;
                 margin-bottom: 10px;
-                border-radius: 50%;
+                .wrap-social {
+                    border-radius: 50%;
+                    width: 35px;
+                    height: 35px;
+                }
             }
         }
         border-bottom:1px solid rgba(255, 255, 255, 0.473);

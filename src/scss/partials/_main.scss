@@ -55,12 +55,12 @@ main {
         }
     }
     section.subscribe {
-        color: white;
+        color: $white;
         background-color: $coralRed;
         padding: 30px;
         .searchbar {
             input {
-                background-color: white;
+                background-color: $white;
             }
         }
         .description,
@@ -109,6 +109,7 @@ main {
                         margin-bottom: 15px;
                     }
                     p {
+                        color: $ebonyClay;
                         opacity: .5;
                         font-size: 14px;
                     }
@@ -123,7 +124,7 @@ main {
         background-repeat: no-repeat;
         padding: 55px 0;
         .description {
-            background-color: white;
+            background-color: $white;
             width: 67%;
             padding: 55px;
             &>*:not(span) {
@@ -134,7 +135,8 @@ main {
                 opacity: .8;
             }
             p {
-                color: #292f47c5;
+                opacity: .5;
+                // color: #292f4779;
                 font-size: 14px;
                 &:last-child {
                     font-size: 12px;

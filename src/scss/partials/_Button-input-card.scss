@@ -3,17 +3,18 @@
     justify-content: center;
     align-items: center;
     .search-button {
-        color: white;
+        color: $white;
         background-color: $bostonBlue;
         height: 30px;
         min-width: 40px;
         i {
-            color: white;
+            color: $white;
             font-size: 10px;
         }
     }
     input {
         background-color: #45799222;
+        padding: 0 10px;
         height: 30px;
         border-radius: 0;
         border: 1px solid #45799222;
@@ -41,7 +42,7 @@
 
 .btn-red {
     opacity: 1 !important;
-    color: white;
+    color: $white;
     background-color: $coralRed;
 }
 
@@ -52,13 +53,13 @@
     align-items: center;
     &>* {
         padding: 5px 13px;
-        background-color: white;
+        background-color: $white;
         color: rgba(0, 0, 0, 0.185);
         border: 1px solid rgba(0, 0, 0, 0.185);
         font-size: 20px;
         &:hover {
             background-color: $bostonBlue;
-            color: white;
+            color: $white;
         }
     }
 }
@@ -75,14 +76,16 @@
         object-fit: cover;
     }
     .info {
-        color: #292f47c5;
+        color: $ebonyClay;
+        opacity: .7;
         padding: 9px;
-        background-color: white;
+        background-color: $white;
         span {
             margin-bottom: 10px;
         }
         .category {
-            color: #292f4781;
+            color: $ebonyClay;
+            opacity: .5;
             font-size: 9px;
         }
         .description {

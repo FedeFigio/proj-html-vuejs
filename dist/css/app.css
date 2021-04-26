@@ -108,17 +108,18 @@ li {
   align-items: center;
 }
 .searchbar .search-button {
-  color: white;
+  color: #FFFFFF;
   background-color: #3a78bd;
   height: 30px;
   min-width: 40px;
 }
 .searchbar .search-button i {
-  color: white;
+  color: #FFFFFF;
   font-size: 10px;
 }
 .searchbar input {
   background-color: #45799222;
+  padding: 0 10px;
   height: 30px;
   border-radius: 0;
   border: 1px solid #45799222;
@@ -147,7 +148,7 @@ li {
 
 .btn-red {
   opacity: 1 !important;
-  color: white;
+  color: #FFFFFF;
   background-color: #ff4550;
 }
 
@@ -159,14 +160,14 @@ li {
 }
 .btn-carousel > * {
   padding: 5px 13px;
-  background-color: white;
+  background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.185);
   border: 1px solid rgba(0, 0, 0, 0.185);
   font-size: 20px;
 }
 .btn-carousel > *:hover {
   background-color: #3a78bd;
-  color: white;
+  color: #FFFFFF;
 }
 
 .card {
@@ -183,15 +184,17 @@ li {
      object-fit: cover;
 }
 .card .info {
-  color: #292f47c5;
+  color: #292f47;
+  opacity: 0.7;
   padding: 9px;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 .card .info span {
   margin-bottom: 10px;
 }
 .card .info .category {
-  color: #292f4781;
+  color: #292f47;
+  opacity: 0.5;
   font-size: 9px;
 }
 .card .info .description {
@@ -260,7 +263,7 @@ nav .login-wrapper .login {
 nav .filter {
   background-color: #292f47;
   padding: 20px;
-  color: white;
+  color: #FFFFFF;
   font-size: 12px;
 }
 nav .filter i {
@@ -271,7 +274,7 @@ nav .filter i {
 header .jumbotron {
   margin-top: 25px;
   height: 300px;
-  color: white;
+  color: #FFFFFF;
   background-color: #ff4550;
 }
 header .jumbotron img {
@@ -343,12 +346,12 @@ main section.recent-courses .btn {
   margin-top: 30px;
 }
 main section.subscribe {
-  color: white;
+  color: #FFFFFF;
   background-color: #ff4550;
   padding: 30px;
 }
 main section.subscribe .searchbar input {
-  background-color: white;
+  background-color: #FFFFFF;
 }
 main section.subscribe .description,
 main section.subscribe .input {
@@ -395,6 +398,7 @@ main section.business-instructor .container .md-card div > *:not(:last-child) {
   margin-bottom: 15px;
 }
 main section.business-instructor .container .md-card div p {
+  color: #292f47;
   opacity: 0.5;
   font-size: 14px;
 }
@@ -406,7 +410,7 @@ main section.investing {
   padding: 55px 0;
 }
 main section.investing .description {
-  background-color: white;
+  background-color: #FFFFFF;
   width: 67%;
   padding: 55px;
 }
@@ -418,7 +422,7 @@ main section.investing .description span {
   opacity: 0.8;
 }
 main section.investing .description p {
-  color: #292f47c5;
+  opacity: 0.5;
   font-size: 14px;
 }
 main section.investing .description p:last-child {
@@ -427,7 +431,7 @@ main section.investing .description p:last-child {
 
 footer {
   background-color: #292f47;
-  color: white;
+  color: #FFFFFF;
 }
 footer section.link {
   border-bottom: 1px solid rgba(255, 255, 255, 0.473);
@@ -454,11 +458,14 @@ footer section.link .container-banner img {
   width: 100%;
 }
 footer section.link .container-banner li {
+  width: calc(100% / 4);
   font-size: 16px;
+  margin-bottom: 10px;
+}
+footer section.link .container-banner li .wrap-social {
+  border-radius: 50%;
   width: 35px;
   height: 35px;
-  margin-bottom: 10px;
-  border-radius: 50%;
 }
 footer section.copiright {
   padding: 10px 0;
